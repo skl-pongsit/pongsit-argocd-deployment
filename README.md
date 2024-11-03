@@ -1,1 +1,1 @@
-# pongist-argocd-deployment
+# pongsit-argocd-deployment
