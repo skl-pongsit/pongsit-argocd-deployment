@@ -21306,13 +21306,13 @@ metadata:
   name: argocd-pongsit-https
   namespace: argocd
 stringData:
-  password: Z2l0aHViX3BhdF8xMUJDWEpIQ1EwaXlpRGtsUFgzU2xtX3ZjbHVxblk5RmV4OXRLb0hsVVFKWGdWU3k0YmJ3aHFadlY1THJXeHUxYnZOVkVZQ0tZVGsySVA2cHRWCg==
+  password: dGhpc2lzcGFzc3dvcmQK
   url: aHR0cHM6Ly9naXRodWIuY29tL3NrbC1wb25nc2l0L3BvYy1tYW5pZmVzdC5naXQ==
-  username: c2tsLXBvbmdzaXQK
+  username: YWRtaW4K
 ---
 apiVersion: v1
 data:
-  redis-password: SFpWSDdDR04zMw==
+  redis-password: ZkZraU9kRTRIMQ==
 kind: Secret
 metadata:
   labels:
@@ -21327,8 +21327,8 @@ type: Opaque
 ---
 apiVersion: v1
 data:
-  admin.password: JDJhJDEwJHNPcElLOTBCaUgwbm8yQVZxMVV3TGVLVlE3T0xJckx5OXhsVllhUkUuRWJjZjh5Y3NwTjgu
-  admin.passwordMtime: MjAyNC0xMS0wM1QxNDo0ODoyMlo=
+  admin.password: JDJhJDEwJDRJWnNsaE5oekE1R2l5cVVhUVRiLy5wekJJdzJERXB5VS5kWWUvLjJ4LzFubjVodzRiOXh5
+  admin.passwordMtime: MjAyNC0xMS0wNFQxMDowODo1MFo=
   clearPassword: dGhpc2lzcGFzc3dvcmQ=
 kind: Secret
 metadata:
@@ -22098,7 +22098,7 @@ spec:
         checksum/configmap: 86bcc953bb473748a3d3dc60b7c11f34e60c93519234d4c37f42e22ada559d47
         checksum/health: aff24913d801436ea469d8d374b2ddb3ec4c43ee7ab24663d5f8ff1a1b6991a9
         checksum/scripts: 560c33ff34d845009b51830c332aa05fa211444d1877d3526d3599be7543aaa5
-        checksum/secret: 22101019a1e627778385e15659e7a470d28c19d99a58537635f2df656a6e0223
+        checksum/secret: a3eba4b9b92b9e72956055a67823e257b1e2677ae2a62e4201f55f9670a0e0d6
       labels:
         app.kubernetes.io/component: master
         app.kubernetes.io/instance: argocd
