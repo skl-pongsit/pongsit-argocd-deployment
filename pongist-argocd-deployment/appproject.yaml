@@ -3,7 +3,7 @@ kind: AppProject
 metadata:
   labels:
     k8slens-edit-resource-version: v1alpha1
-  name: poc-manifest
+  name: pongsit-infra
   namespace: argocd
 spec:
   clusterResourceWhitelist:
