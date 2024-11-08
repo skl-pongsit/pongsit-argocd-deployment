@@ -12,5 +12,6 @@ helmCharts:
 # namespace: argocd
 resources:
   - ns.yaml
+  - appproject.yaml
   - secret.yaml
   - application.yaml
