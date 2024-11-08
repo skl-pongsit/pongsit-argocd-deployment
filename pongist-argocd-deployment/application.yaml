@@ -4,7 +4,7 @@ metadata:
   name: root-management-lab-cluster
   namespace: argocd
 spec:
-  project: pongsit-infra
+  project: root-manifest
   source:
     repoURL: https://github.com/skl-pongsit/poc-manifest.git
     path: pongsit-infra/lab-cluster

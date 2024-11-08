@@ -21299,20 +21299,8 @@ metadata:
   namespace: argocd
 ---
 apiVersion: v1
-kind: Secret
-metadata:
-  labels:
-    argocd.argoproj.io/secret-type: repository
-  name: argocd-pongsit-https
-  namespace: argocd
-stringData:
-  password: dGhpc2lzcGFzc3dvcmQK
-  url: aHR0cHM6Ly9naXRodWIuY29tL3NrbC1wb25nc2l0L3BvYy1tYW5pZmVzdC5naXQ==
-  username: YWRtaW4K
----
-apiVersion: v1
 data:
-  redis-password: ZkZraU9kRTRIMQ==
+  redis-password: dFh6Y0xDbU5XSQ==
 kind: Secret
 metadata:
   labels:
@@ -21327,8 +21315,8 @@ type: Opaque
 ---
 apiVersion: v1
 data:
-  admin.password: JDJhJDEwJDRJWnNsaE5oekE1R2l5cVVhUVRiLy5wekJJdzJERXB5VS5kWWUvLjJ4LzFubjVodzRiOXh5
-  admin.passwordMtime: MjAyNC0xMS0wNFQxMDowODo1MFo=
+  admin.password: JDJhJDEwJFFHQ1FTUmRTUFNGSUpYdXZVb1dpb2VOVWduUWZ2eUcxMXF3N1g4QXczcUZKdGpzM0pjSFdD
+  admin.passwordMtime: MjAyNC0xMS0wOFQwOTozODozM1o=
   clearPassword: dGhpc2lzcGFzc3dvcmQ=
 kind: Secret
 metadata:
@@ -21340,6 +21328,20 @@ metadata:
     app.kubernetes.io/version: 2.12.6
     helm.sh/chart: argo-cd-7.0.20
   name: argocd-secret
+  namespace: argocd
+type: Opaque
+---
+apiVersion: v1
+data:
+  type: Z2l0
+  url: aHR0cHM6Ly9naXRodWIuY29tL3NrbC1wb25nc2l0L3BvYy1tYW5pZmVzdC5naXQ=
+kind: Secret
+metadata:
+  annotations:
+    managed-by: argocd.argoproj.io
+  labels:
+    argocd.argoproj.io/secret-type: repository
+  name: repo-1767059359
   namespace: argocd
 type: Opaque
 ---
@@ -22098,7 +22100,7 @@ spec:
         checksum/configmap: 86bcc953bb473748a3d3dc60b7c11f34e60c93519234d4c37f42e22ada559d47
         checksum/health: aff24913d801436ea469d8d374b2ddb3ec4c43ee7ab24663d5f8ff1a1b6991a9
         checksum/scripts: 560c33ff34d845009b51830c332aa05fa211444d1877d3526d3599be7543aaa5
-        checksum/secret: a3eba4b9b92b9e72956055a67823e257b1e2677ae2a62e4201f55f9670a0e0d6
+        checksum/secret: 6301c032cc442653b9d8fc754f51149b13f555d7fb9d921730757e95e0b6d63d
       labels:
         app.kubernetes.io/component: master
         app.kubernetes.io/instance: argocd
@@ -22328,6 +22330,25 @@ spec:
       app.kubernetes.io/name: redis
 ---
 apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  labels:
+    k8slens-edit-resource-version: v1alpha1
+  name: root-manifest
+  namespace: argocd
+spec:
+  clusterResourceWhitelist:
+  - group: '*'
+    kind: '*'
+  destinations:
+  - namespace: '*'
+    server: https://kubernetes.default.svc
+  orphanedResources:
+    warn: false
+  sourceRepos:
+  - '*'
+---
+apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: root-management-lab-cluster
@@ -22336,7 +22357,7 @@ spec:
   destination:
     namespace: main
     server: https://kubernetes.default.svc
-  project: poc-manifest
+  project: root-manifest
   source:
     path: pongsit-infra/lab-cluster
     repoURL: https://github.com/skl-pongsit/poc-manifest.git
