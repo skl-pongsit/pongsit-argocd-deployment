@@ -21300,7 +21300,7 @@ metadata:
 ---
 apiVersion: v1
 data:
-  password: Z2l0aHViX3BhdF8xMUJDWEpIQ1EwR0FpSEtSUXY0S2VqX2Y0NW1ud3BJczdWM2w0U3c1dVR3WGpQMmNObDBiREhqallXdFAxUkdsWUNaQUZNVFlHS1pHZHNwa1pD
+  password: Z2l0aHViX3BhdF8xMUJDWEpIQ1EwM1RHOTl4bzAzc3REX0VieFl4QzV3ZXNvMzBQeDhMTTZMQmJxQzJlbGdIWlJxV1l4Z2YzSUZzOFM3RlJONUQ2UDhzblpSTExv
   type: Z2l0
   url: aHR0cHM6Ly9naXRodWIuY29tL3NrbC1wb25nc2l0L3BvYy1tYW5pZmVzdC5naXQ=
   username: c2tsLXBvbmdzaXQ=
@@ -21316,7 +21316,7 @@ type: Opaque
 ---
 apiVersion: v1
 data:
-  redis-password: M1piWnljRVFuMw==
+  redis-password: aGRzd0x1STBWaQ==
 kind: Secret
 metadata:
   labels:
@@ -21331,8 +21331,8 @@ type: Opaque
 ---
 apiVersion: v1
 data:
-  admin.password: JDJhJDEwJDN5MVR1WDBzdEtJeGNZODBkT2J6Lk9aeWc3eGFjUkVGbjNTQk1kR24uRzJjV0laSkpKNnp5
-  admin.passwordMtime: MjAyNC0xMS0wOFQxNToxMjoyMVo=
+  admin.password: JDJhJDEwJHVVR3pSSFFxZXUwb0x3dTE5ZHRock9zajR3OHdsNmRqb25ueVh3eTVSQTR1OXhXdHVIUDBD
+  admin.passwordMtime: MjAyNC0xMS0wOFQxNjo1NDo1MFo=
   clearPassword: dGhpc2lzcGFzc3dvcmQ=
 kind: Secret
 metadata:
@@ -22102,7 +22102,7 @@ spec:
         checksum/configmap: 86bcc953bb473748a3d3dc60b7c11f34e60c93519234d4c37f42e22ada559d47
         checksum/health: aff24913d801436ea469d8d374b2ddb3ec4c43ee7ab24663d5f8ff1a1b6991a9
         checksum/scripts: 560c33ff34d845009b51830c332aa05fa211444d1877d3526d3599be7543aaa5
-        checksum/secret: 753533fc31e526f83aee490bd4029eed51a275cfee774763cbf53a0e48ae4d13
+        checksum/secret: 5e4388271d8cbb9cb69a3ec166b1512427de7e5aa3be9ac0a46e5d6362589339
       labels:
         app.kubernetes.io/component: master
         app.kubernetes.io/instance: argocd
