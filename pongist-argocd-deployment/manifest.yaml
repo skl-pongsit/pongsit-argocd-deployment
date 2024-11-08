@@ -21300,7 +21300,23 @@ metadata:
 ---
 apiVersion: v1
 data:
-  redis-password: bk5heHZ3bVJTNg==
+  password: Z2l0aHViX3BhdF8xMUJDWEpIQ1EwR0FpSEtSUXY0S2VqX2Y0NW1ud3BJczdWM2w0U3c1dVR3WGpQMmNObDBiREhqallXdFAxUkdsWUNaQUZNVFlHS1pHZHNwa1pD
+  type: Z2l0
+  url: aHR0cHM6Ly9naXRodWIuY29tL3NrbC1wb25nc2l0L3BvYy1tYW5pZmVzdC5naXQ=
+  username: c2tsLXBvbmdzaXQ=
+kind: Secret
+metadata:
+  annotations:
+    managed-by: argocd.argoproj.io
+  labels:
+    argocd.argoproj.io/secret-type: repository
+  name: argocd-pongsit-https
+  namespace: argocd
+type: Opaque
+---
+apiVersion: v1
+data:
+  redis-password: M1piWnljRVFuMw==
 kind: Secret
 metadata:
   labels:
@@ -21315,8 +21331,8 @@ type: Opaque
 ---
 apiVersion: v1
 data:
-  admin.password: JDJhJDEwJFVvaFdUR1N1bUtINlB3aGhBd3F2TXVEUDMuNTZkVjlXWi4zUUsyYnJKRnN4TzJRQW1NbFBT
-  admin.passwordMtime: MjAyNC0xMS0wOFQxMjowNTo0N1o=
+  admin.password: JDJhJDEwJDN5MVR1WDBzdEtJeGNZODBkT2J6Lk9aeWc3eGFjUkVGbjNTQk1kR24uRzJjV0laSkpKNnp5
+  admin.passwordMtime: MjAyNC0xMS0wOFQxNToxMjoyMVo=
   clearPassword: dGhpc2lzcGFzc3dvcmQ=
 kind: Secret
 metadata:
@@ -21328,22 +21344,6 @@ metadata:
     app.kubernetes.io/version: 2.12.6
     helm.sh/chart: argo-cd-7.0.20
   name: argocd-secret
-  namespace: argocd
-type: Opaque
----
-apiVersion: v1
-data:
-  password: Z2l0aHViX3BhdF8xMUJDWEpIQ1EwaXlpRGtsUFgzU2xtX3ZjbHVxblk5RmV4OXRLb0hsVVFKWGdWU3k0YmJ3aHFadlY1THJXeHUxYnZOVkVZQ0tZVGsySVA2cHRW
-  type: Z2l0
-  url: aHR0cHM6Ly9naXRodWIuY29tL3NrbC1wb25nc2l0L3BvYy1tYW5pZmVzdC5naXQ=
-  username: c2tsLXBvbmdzaXQ=
-kind: Secret
-metadata:
-  annotations:
-    managed-by: argocd.argoproj.io
-  labels:
-    argocd.argoproj.io/secret-type: repository
-  name: repo-1767059359
   namespace: argocd
 type: Opaque
 ---
@@ -22102,7 +22102,7 @@ spec:
         checksum/configmap: 86bcc953bb473748a3d3dc60b7c11f34e60c93519234d4c37f42e22ada559d47
         checksum/health: aff24913d801436ea469d8d374b2ddb3ec4c43ee7ab24663d5f8ff1a1b6991a9
         checksum/scripts: 560c33ff34d845009b51830c332aa05fa211444d1877d3526d3599be7543aaa5
-        checksum/secret: 2b31a8bd07af03acd6c2c5e7b50a7a96eff11f07eb22c86c6d79802b1f148a59
+        checksum/secret: 753533fc31e526f83aee490bd4029eed51a275cfee774763cbf53a0e48ae4d13
       labels:
         app.kubernetes.io/component: master
         app.kubernetes.io/instance: argocd
